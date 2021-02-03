@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.healthtracker.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_healthFragment"
+            app:destination="@id/healthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/healthFragment"
+        android:name="com.example.healthtracker.HealthFragment"
+        android:label="HealthFragment" >
+        <action
+            android:id="@+id/action_healthFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_healthFragment_to_precautionsFragment"
+            app:destination="@id/precautionsFragment" />
+        <action
+            android:id="@+id/action_healthFragment_to_weeklyReportFragment"
+            app:destination="@id/weeklyReportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.healthtracker.AddItemFragment"
+        android:label="AddItemFragment" />
+    <fragment
+        android:id="@+id/precautionsFragment"
+        android:name="com.example.healthtracker.PrecautionsFragment"
+        android:label="PrecautionsFragment" />
+    <fragment
+        android:id="@+id/weeklyReportFragment"
+        android:name="com.example.healthtracker.WeeklyReportFragment"
+        android:label="WeeklyReportFragment" />
+</navigation>
