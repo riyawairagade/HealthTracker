@@ -30,18 +30,11 @@ class AddItemFragment : Fragment() {
 
         val db = Firebase.firestore
         binding.addButton.setOnClickListener {
-            val user = hashMapOf(
-                    "temperature" to binding.temperatureInputEditText.text.toString(),
-                    "oxygen" to binding.oxygenEditText.text.toString(),
-                    "date" to Timestamp(Date()),
-                    "cough" to binding.coughCheckBox.isChecked,
-                    "shortness Of breath" to binding.shortnessOfBreathCheckBox.isChecked,
-                    "body aches" to binding.bodyAchesCheckBox.isChecked
 
-            )
+            val data = Health(binding.temperatureInputEditText.text.toString().toDouble(),binding.oxygenEditText.text.toString().toDouble(),Timestamp(Date()),binding.coughCheckBox.isChecked,binding.shortnessOfBreathCheckBox.isChecked,binding.bodyAchesCheckBox.isChecked,)
 
             db.collection(Firebase.auth.uid?:"")
-                    .add(user)
+                    .add(data)
                     .addOnSuccessListener { documentReference ->
                         Log.d(javaClass.simpleName, "DocumentSnapshot added with ID: ${documentReference.id}")
                         findNavController().navigate(R.id.action_addItemFragment_to_healthFragment)

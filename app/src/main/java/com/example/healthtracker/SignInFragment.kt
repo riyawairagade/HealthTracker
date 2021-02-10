@@ -50,6 +50,10 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        if (Firebase.auth.currentUser!= null){
+            findNavController().navigate(R.id.action_signInFragment_to_healthFragment)
+        }
+
         _googleSignInClient = GoogleSignIn.getClient(
                 requireContext(),
                 GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
