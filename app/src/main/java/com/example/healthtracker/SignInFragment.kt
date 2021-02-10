@@ -69,7 +69,6 @@ class SignInFragment : Fragment() {
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         if (completedTask.isSuccessful) {
             val account = completedTask.getResult(ApiException::class.java)!!
-            Toast.makeText(activity,"firebaseAuthWithGoogle:" + account.id,Toast.LENGTH_LONG).show();
             firebaseAuthWithGoogle(account.idToken!!)
         } else {
             Toast.makeText(activity,"Google sign in failed. Please try again later",Toast.LENGTH_LONG).show();

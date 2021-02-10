@@ -21,22 +21,31 @@
             android:id="@+id/action_healthFragment_to_addItemFragment"
             app:destination="@id/addItemFragment" />
         <action
-            android:id="@+id/action_healthFragment_to_precautionsFragment"
-            app:destination="@id/precautionsFragment" />
-        <action
             android:id="@+id/action_healthFragment_to_weeklyReportFragment"
             app:destination="@id/weeklyReportFragment" />
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
         android:name="com.example.healthtracker.AddItemFragment"
-        android:label="AddItemFragment" />
+        android:label="AddItemFragment" >
+        <action
+            android:id="@+id/action_addItemFragment_to_healthFragment"
+            app:destination="@id/healthFragment" />
+    </fragment>
     <fragment
         android:id="@+id/precautionsFragment"
         android:name="com.example.healthtracker.PrecautionsFragment"
-        android:label="PrecautionsFragment" />
+        android:label="PrecautionsFragment" >
+        <action
+            android:id="@+id/action_precautionsFragment_to_healthFragment"
+            app:destination="@id/healthFragment" />
+    </fragment>
     <fragment
         android:id="@+id/weeklyReportFragment"
         android:name="com.example.healthtracker.WeeklyReportFragment"
-        android:label="WeeklyReportFragment" />
+        android:label="WeeklyReportFragment" >
+        <action
+            android:id="@+id/action_weeklyReportFragment_to_healthFragment"
+            app:destination="@id/healthFragment" />
+    </fragment>
 </navigation>

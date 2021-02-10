@@ -8,4 +8,14 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="precautions">
+        To prevent the spread of COVID-19:
+        \nClean your hands often. Use soap and water, or an alcohol-based hand rub.
+        \nMaintain a safe distance from anyone who is coughing or sneezing.
+        \nWear a mask when physical distancing is not possible.
+        \nDon’t touch your eyes, nose or mouth.
+        \nCover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.
+        \nStay home if you feel unwell.
+        \nIf you have a fever, cough and difficulty breathing, seek medical attention.
+    </string>
 </resources>
